@@ -9,3 +9,11 @@ Then I would like a menu on the side with like
 •⁠  ⁠projects 
 •⁠  ⁠contacts
 ```
+
+# Installation
+
+To run project:
+```bash
+    make
+```
+
