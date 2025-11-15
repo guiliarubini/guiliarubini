@@ -2,43 +2,25 @@ import React from 'react';
 import { FaDatabase, FaCode, FaCloud, FaTools, FaServer } from 'react-icons/fa';
 
 const SkillsSection = () => {
+  // TODO: Add fashion design skills
   const skills = [
     {
-      title: 'Programming Languages',
-      items: ['Python', 'Bash', 'SQL'],
+      title: 'TODO: Design Skills',
+      items: ['TODO: Add skills here'],
       color: '#007bff', // Blue
       icon: <FaCode />,
     },
     {
-      title: 'Databases',
-      items: ['Kafka', 'MySQL', 'PostgreSQL', 'Hive', 'Impala', 'Neo4j', 'Redis'],
+      title: 'TODO: Software Tools',
+      items: ['TODO: Add software tools here'],
       color: '#ff5722', // Orange
       icon: <FaDatabase />,
     },
     {
-      title: 'Big Data Tools',
-      items: ['Hadoop', 'HDFS', 'YARN', 'PySpark', 'Spark Streaming', 'Delta Lake', 'Qlik CDC'],
+      title: 'TODO: Specializations',
+      items: ['TODO: Add specializations here'],
       color: '#ffc107', // Yellow
       icon: <FaServer />,
-    },
-    {
-      title: 'Cloud Platforms',
-      items: [
-        'Azure Synapse Analytics',
-        'Azure Event Hub',
-        'Azure Data Factory',
-        'Azure Databricks',
-        'Google BigQuery',
-        'Snowflake',
-      ],
-      color: '#9c27b0', // Purple
-      icon: <FaCloud />,
-    },
-    {
-      title: 'DevOps & CI/CD Tools',
-      items: ['Airflow', 'Jenkins', 'GitLab CI/CD', 'Docker', 'Kubernetes', 'Prometheus', 'Nginx'],
-      color: '#4caf50', // Green
-      icon: <FaTools />,
     },
   ];
 

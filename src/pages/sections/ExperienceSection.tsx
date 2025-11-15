@@ -1,9 +1,10 @@
 import React from 'react';
 
 const ExperienceSection = () => {
+  // TODO: Add fashion design work experience
   const experiences = [
     {
-      title: 'Senior Data Engineer',
+      title: 'TODO: Job Title',
       company: 'New Yorker GmbH & Co.KG',
       location: 'Braunschweig, Germany',
       duration: '01/2023 - Present',

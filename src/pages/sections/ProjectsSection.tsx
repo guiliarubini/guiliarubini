@@ -20,57 +20,18 @@ interface Project {
   githubLink: string;
 }
 
+// TODO: Add fashion design projects/collections
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Fraud Risk Assessment Streaming ETL',
-    imageUrl: riskAssesmentImage,
+    title: 'TODO: Project Title',
+    imageUrl: inProgressImage,
     borderColor: '#007bff',
-    tags: ['Kafka', 'Azure', 'Databricks', 'Snowflake', 'Python', 'Spark Streaming'],
-    githubLink: 'https://github.com/BondaiKa/fraud-risk-assesment-streaming-etl',
+    tags: ['TODO: Add project tags'],
+    githubLink: '',
   },
   {
     id: 2,
-    title: 'Lane Line Recognition System',
-    imageUrl: laneRecognitionImage,
-    borderColor: '#28a745',
-    tags: ['Python', 'TensorFlow', 'Pandas', 'OpenCV'],
-    githubLink: 'https://github.com/BondaiKa/lane_line_recognition',
-  },
-  {
-    id: 3,
-    title: 'Historical Data Processing with PySpark',
-    imageUrl: historicalDataProcessingImage,
-    borderColor: '#dc3545',
-    tags: ['PySpark', 'Python', 'Data Processing', 'Docker', 'HDFS'],
-    githubLink: 'https://github.com/BondaiKa/data_engineer_pet_project_2',
-  },
-  {
-    id: 4,
-    title: 'Open Source Contributor Index (OSCI)',
-    imageUrl: osciImage,
-    borderColor: '#ffc107',
-    tags: ['Open Source', 'Python', 'Azure', 'Azure Data Factory', 'Azure Functions', 'BigQuery', 'Google Data Studio', 'Databricks'],
-    githubLink: 'https://github.com/epam/OSCI',
-  },
-  {
-    id: 5,
-    title: 'Tiny URL Service',
-    imageUrl: tinyURLImage,
-    borderColor: '#17a2b8',
-    tags: ['Backend', 'Flask', 'Redis', 'Docker', 'Python'],
-    githubLink: 'https://github.com/BondaiKa/tinyurl',
-  },
-  {
-    id: 6,
-    title: 'Car Model Classification with TensorFlow',
-    imageUrl: carModelClassificationImage,
-    borderColor: '#6f42c1',
-    tags: ['Python', 'TensorFlow', 'FastAPI', 'Docker', 'Image Classification'],
-    githubLink: 'https://github.com/BondaiKa/Car-Model-Classification',
-  },
-  {
-    id: 7,
     title: 'Coming Soon 🚧',
     imageUrl: inProgressImage,
     borderColor: 'yellow',
