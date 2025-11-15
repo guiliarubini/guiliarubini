@@ -79,7 +79,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete, isExiting }) => {
         display: 'flex',
         alignItems: isExiting ? 'center' : 'center',
         justifyContent: 'center',
-        fontSize: isExiting ? '2rem' : '4rem',
+        fontSize: '4rem',
         cursor: isExiting ? 'default' : 'pointer',
         flexDirection: 'column',
         fontFamily: '"Playfair Display", "Georgia", serif',
@@ -100,6 +100,9 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete, isExiting }) => {
           }}
         >
           {displayedText.split('\n')[0]}
+          {displayedText.split('\n').length === 1 && (
+            <span style={{ opacity: showCursor && !isExiting ? 1 : 0, transition: 'opacity 0.3s' }}>|</span>
+          )}
         </div>
         <div
           style={{
@@ -111,8 +114,10 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onComplete, isExiting }) => {
           }}
         >
           {displayedText.split('\n')[1]}
+          {displayedText.split('\n').length > 1 && (
+            <span style={{ opacity: showCursor && !isExiting ? 1 : 0, transition: 'opacity 0.3s' }}>|</span>
+          )}
         </div>
-        <span style={{ opacity: showCursor && !isExiting ? 1 : 0, transition: 'opacity 0.3s' }}>|</span>
       </div>
     </div>
   );

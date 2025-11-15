@@ -57,6 +57,8 @@ const App: React.FC = () => {
           marginTop: isExiting ? '0' : '100vh',
           opacity: isExiting ? 1 : 0,
           transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)',
+          backgroundColor: 'black',
+          minHeight: '100vh',
         }}
       >
         <Suspense fallback={<div>Loading...</div>}>
