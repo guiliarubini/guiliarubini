@@ -15,7 +15,7 @@ src/
 ├── index.css                  # Global styles
 │
 ├── components/
-                               # IntroScreen as Ruby asked
+    |--  ProjectsSection       # IntroScreen as Ruby asked
 │   └── Sidebar.tsx            # Navigation sidebar with profile
 │
 ├── pages/

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import newYorkerLogo from '../../assets/newyorker_logo.png';
+import newYorkerLogo from '../../assets/new_yorker_project_logo.jpeg';
 import universityPreview from '../../assets/university_subcategory_image_family.png';
 
 interface Project {
@@ -68,16 +68,16 @@ const ProjectsSection: React.FC = () => {
             >
               <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
                 {/* Image Placeholder */}
-                <div className="w-full md:w-1/2 aspect-[4/3] bg-gradient-to-br from-white/20 to-white/5 rounded-2xl overflow-hidden border border-white/10 group-hover:border-white/30 transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div className="w-full md:w-2/5 aspect-square flex items-center justify-center group-hover:scale-105 transition-all duration-500">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain rounded-2xl shadow-2xl"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="w-full md:w-1/2 space-y-4">
+                <div className="w-full md:w-3/5 space-y-4">
                   <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-white/80 transition-colors duration-300">
                     {project.title}
                   </h3>

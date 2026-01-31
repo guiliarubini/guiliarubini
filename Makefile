@@ -1,4 +1,4 @@
-all: run
+all: node_modules run
 
 node_modules:
 	npm install
