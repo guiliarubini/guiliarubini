@@ -46,21 +46,21 @@ const ProjectsSection: React.FC = () => {
     : allProjectItems.filter(item => item.category === selectedFilter);
 
   return (
-    <div className="py-20 px-8">
-      <h2 className="text-6xl md:text-7xl font-serif mb-24 text-center text-white tracking-editorial">Projects</h2>
+    <div className="py-12 md:py-20 px-6 md:px-8">
+      <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif mb-12 md:mb-24 text-center text-white tracking-editorial">Projects</h2>
 
       {/* Landing View - Scrollable Project Cards */}
       {!selectedProject && (
-        <div className="space-y-32 max-w-7xl mx-auto">
+        <div className="space-y-16 md:space-y-32 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.id}
               className="group cursor-pointer"
               onClick={() => handleProjectClick(project.id)}
             >
-              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-16 items-center`}>
+              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center`}>
                 {/* Image Placeholder */}
-                <div className="w-full md:w-2/5 flex items-center justify-center group-hover:opacity-90 transition-all duration-700">
+                <div className="w-3/4 mx-auto md:mx-0 md:w-2/5 flex items-center justify-center group-hover:opacity-90 transition-all duration-700">
                   <img 
                     src={project.coverImage} 
                     alt={project.title}
@@ -69,8 +69,8 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <div className="w-full md:w-3/5 space-y-6 font-sans">
-                  <h3 className="text-4xl md:text-5xl font-serif text-white group-hover:text-white/70 transition-all duration-700 tracking-editorial">
+                <div className="w-full md:w-3/5 space-y-4 md:space-y-6 font-sans">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white group-hover:text-white/70 transition-all duration-700 tracking-editorial">
                     {project.title}
                   </h3>
                   <p className="text-base md:text-lg text-white/60 leading-loose font-light">
@@ -111,7 +111,7 @@ const ProjectsSection: React.FC = () => {
             <span>←</span> Back to Projects
           </button>
 
-          <h3 className="text-5xl md:text-6xl font-serif text-white mb-16 tracking-editorial">{currentProject.title}</h3>
+          <h3 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-8 md:mb-16 tracking-editorial">{currentProject.title}</h3>
 
           {/* Categories/Tags Display */}
           {currentProject.subcategories && (
@@ -145,14 +145,14 @@ const ProjectsSection: React.FC = () => {
           )}
 
           {/* Alternating Image + Description Layout */}
-          <div className="space-y-32">
+          <div className="space-y-16 md:space-y-32">
             {filteredItems.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-16 items-center`}
+                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center`}
               >
                 {/* Image */}
-                <div className="w-full md:w-1/2 flex items-center justify-center">
+                <div className="w-3/4 mx-auto md:mx-0 md:w-1/2 flex items-center justify-center">
                   <img 
                     src={item.image} 
                     alt={item.description}

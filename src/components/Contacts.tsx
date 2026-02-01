@@ -2,9 +2,9 @@ import React from 'react';
 
 const Contacts: React.FC = () => {
   return (
-    <section id="contacts" className="py-20 px-8">
+    <section id="contacts" className="py-12 md:py-20 px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl md:text-7xl font-serif mb-24 text-center text-white tracking-editorial">Contacts</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif mb-12 md:mb-24 text-center text-white tracking-editorial">Contacts</h2>
         
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <div className="space-y-2">

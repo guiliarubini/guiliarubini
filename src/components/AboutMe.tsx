@@ -3,13 +3,13 @@ import aboutMeImage from '../assets/about_me_image.png';
 
 const AboutMe: React.FC = () => {
   return (
-    <section id="about" className="py-20 px-8">
+    <section id="about" className="py-12 md:py-20 px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl md:text-7xl font-serif mb-20 text-center text-white tracking-editorial">About Me</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif mb-12 md:mb-20 text-center text-white tracking-editorial">About Me</h2>
         
-        <div className="flex flex-col md:flex-row gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
           {/* Image */}
-          <div className="w-full md:w-2/5 flex items-center justify-center">
+          <div className="w-3/4 mx-auto md:mx-0 md:w-2/5 flex items-center justify-center">
             <img 
               src={aboutMeImage} 
               alt="Giulia Rubini"
