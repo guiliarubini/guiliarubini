@@ -5,17 +5,25 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'serif': ['DM Serif Display', 'serif'],
+        'sans': ['Inter', 'sans-serif'],
+      },
+      letterSpacing: {
+        'luxury': '0.15em',
+        'editorial': '0.05em',
+      },
       width: {
-        '112': '28rem', // Adds w-112 class (448px)
-        '128': '32rem', // Adds w-128 class (512px)
-        '140': '36rem', // Adds w-140 class (576px)
-        '152': '40rem', // Adds w-152 class (640px)
+        '112': '28rem',
+        '128': '32rem',
+        '140': '36rem',
+        '152': '40rem',
       },
       height: {
-        '112': '28rem', // Adds h-112 class (448px)
-        '128': '32rem', // Adds h-128 class (512px)
-        '140': '36rem', // Adds h-140 class (576px)
-        '152': '40rem', // Adds h-152 class (640px)
+        '112': '28rem',
+        '128': '32rem',
+        '140': '36rem',
+        '152': '40rem',
       },
     },
   },

@@ -51,11 +51,11 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const renderNavItems = () =>
     navItems.map((item) => (
-      <li key={item.id} className="w-full mb-2">
+      <li key={item.id} className="w-full mb-4">
         <button
           type="button"
           onClick={() => handleNavClick(item.id)}
-          className="w-full py-2 text-center text-white hover:text-white/70 transition-colors duration-300"
+          className="w-full py-3 text-center text-white uppercase tracking-luxury text-xs font-sans font-medium hover:text-white/60 transition-all duration-500"
         >
           {item.label}
         </button>
@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     <>
       {/* Hamburger Menu - Always Visible */}
       <div
-        className="fixed top-4 left-4 w-12 h-12 bg-black/80 border border-white/20 rounded-full shadow-md flex items-center justify-center text-2xl text-white cursor-pointer z-50 transition-colors duration-300 hover:bg-black hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30"
+        className="fixed top-6 left-6 w-14 h-14 bg-black border border-white/10 rounded-none flex items-center justify-center text-xl text-white cursor-pointer z-50 transition-all duration-500 hover:border-white/40 focus:outline-none focus:ring-1 focus:ring-white/20"
         onClick={onToggleSidebar}
         role="button"
         tabIndex={0}
@@ -78,39 +78,39 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full bg-black/95 backdrop-blur-sm border-r border-white/10 shadow-lg p-5 flex flex-col items-center transform transition-transform duration-300 z-[100] ${
+        className={`fixed top-0 left-0 h-full bg-black border-r border-white/10 p-8 flex flex-col items-center transform transition-transform duration-500 z-[100] ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } ${isMobile ? 'w-2/5' : 'w-64'}`}
+        } ${isMobile ? 'w-2/5' : 'w-72'}`}
       >
         {/* Close Button */}
         <button
           onClick={onCloseSidebar}
-          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-white/70 hover:text-white transition-colors duration-300"
+          className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center text-white/50 hover:text-white transition-all duration-500"
           aria-label="Close Sidebar"
         >
-          <FaTimes size={20} />
+          <FaTimes size={18} />
         </button>
 
         {/* Profile Image */}
         <img
           src={profileImage}
           alt="Giulia Rubini"
-          className="w-32 h-32 rounded-full object-cover mb-5"
+          className="w-36 h-36 rounded-none object-cover mb-8 mt-12 border border-white/10"
         />
-        <h1 className="text-2xl font-semibold text-center text-white">Giulia Rubini</h1>
-        <p className="mt-2 mb-5 text-white/70 text-center">
+        <h1 className="text-2xl font-serif text-center text-white tracking-editorial mb-2">Giulia Rubini</h1>
+        <p className="mt-1 mb-12 text-white/50 text-center text-xs uppercase tracking-luxury font-sans font-light">
           Fashion Designer
         </p>
 
         {/* Navigation Links */}
-        <nav className="w-full">
+        <nav className="w-full mt-4">
           <ul className="flex flex-col items-center list-none">
             {renderNavItems()}
           </ul>
         </nav>
 
         {/* Footer */}
-        <footer className="mt-auto text-white/40 text-center">
+        <footer className="mt-auto text-white/30 text-center text-xs font-sans tracking-wide">
           <p>© 2025 Giulia Rubini</p>
         </footer>
       </aside>

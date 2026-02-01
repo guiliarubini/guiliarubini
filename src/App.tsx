@@ -53,15 +53,16 @@ const App: React.FC = () => {
     <>
       <IntroScreen onComplete={handleIntroComplete} isExiting={isExiting} />
       <div
+        className="font-sans"
         style={{
           marginTop: isExiting ? '0' : '100vh',
           opacity: isExiting ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)',
-          backgroundColor: 'black',
+          transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1)',
+          backgroundColor: '#000000',
           minHeight: '100vh',
         }}
       >
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className="flex items-center justify-center h-screen text-white/40 text-sm uppercase tracking-luxury">Loading...</div>}>
         <Sidebar
           isOpen={isSidebarOpen}
           isMobile={isMobile}

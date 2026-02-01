@@ -46,50 +46,50 @@ const ProjectsSection: React.FC = () => {
     : allProjectItems.filter(item => item.category === selectedFilter);
 
   return (
-    <div className="py-10 px-5">
-      <h2 className="text-4xl font-bold mb-12 text-center text-white">Projects</h2>
+    <div className="py-20 px-8">
+      <h2 className="text-6xl md:text-7xl font-serif mb-24 text-center text-white tracking-editorial">Projects</h2>
 
       {/* Landing View - Scrollable Project Cards */}
       {!selectedProject && (
-        <div className="space-y-16 max-w-6xl mx-auto">
+        <div className="space-y-32 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.id}
               className="group cursor-pointer"
               onClick={() => handleProjectClick(project.id)}
             >
-              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
+              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-16 items-center`}>
                 {/* Image Placeholder */}
-                <div className="w-full md:w-2/5 aspect-square flex items-center justify-center group-hover:scale-105 transition-all duration-500">
+                <div className="w-full md:w-2/5 flex items-center justify-center group-hover:opacity-90 transition-all duration-700">
                   <img 
                     src={project.coverImage} 
                     alt={project.title}
-                    className="w-full h-auto object-contain rounded-2xl shadow-2xl"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="w-full md:w-3/5 space-y-4">
-                  <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-white/80 transition-colors duration-300">
+                <div className="w-full md:w-3/5 space-y-6 font-sans">
+                  <h3 className="text-4xl md:text-5xl font-serif text-white group-hover:text-white/70 transition-all duration-700 tracking-editorial">
                     {project.title}
                   </h3>
-                  <p className="text-lg text-white/70 leading-relaxed">
+                  <p className="text-base md:text-lg text-white/60 leading-loose font-light">
                     {project.description}
                   </p>
                   {project.subcategories && (
-                    <div className="flex flex-wrap gap-2 pt-2">
+                    <div className="flex flex-wrap gap-3 pt-4">
                       {project.subcategories.map((sub) => (
                         <span
                           key={sub.name}
-                          className="px-3 py-1 text-sm bg-white/10 text-white/80 rounded-full border border-white/20"
+                          className="px-4 py-2 text-xs uppercase tracking-luxury bg-transparent text-white/40 border border-white/10 font-light"
                         >
                           {sub.name}
                         </span>
                       ))}
                     </div>
                   )}
-                  <div className="pt-4">
-                    <span className="inline-flex items-center gap-2 text-white/60 group-hover:text-white group-hover:gap-4 transition-all duration-300">
+                  <div className="pt-6">
+                    <span className="inline-flex items-center gap-3 text-white/40 text-xs uppercase tracking-luxury group-hover:text-white group-hover:gap-5 transition-all duration-700 font-light">
                       View Project <span>→</span>
                     </span>
                   </div>
@@ -102,27 +102,27 @@ const ProjectsSection: React.FC = () => {
 
       {/* Project Detail View */}
       {selectedProject && currentProject && (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Back Button */}
           <button
             onClick={handleBackToProjects}
-            className="mb-8 text-white/80 hover:text-white transition-colors duration-300 flex items-center gap-2 text-lg"
+            className="mb-12 text-white/40 hover:text-white transition-all duration-700 flex items-center gap-3 text-xs uppercase tracking-luxury font-sans font-light"
           >
             <span>←</span> Back to Projects
           </button>
 
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">{currentProject.title}</h3>
+          <h3 className="text-5xl md:text-6xl font-serif text-white mb-16 tracking-editorial">{currentProject.title}</h3>
 
           {/* Categories/Tags Display */}
           {currentProject.subcategories && (
-            <div className="mb-12">
-              <div className="flex flex-wrap gap-3">
+            <div className="mb-20">
+              <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => handleFilterClick('All')}
-                  className={`px-4 py-2 text-sm rounded-full border transition-all duration-300 ${
+                  className={`px-6 py-3 text-xs uppercase tracking-luxury border transition-all duration-700 font-sans ${
                     selectedFilter === 'All'
-                      ? 'bg-white text-black shadow-lg scale-105'
-                      : 'bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:scale-105'
+                      ? 'bg-white text-black border-white font-medium'
+                      : 'bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30 font-light'
                   }`}
                 >
                   All
@@ -131,10 +131,10 @@ const ProjectsSection: React.FC = () => {
                   <button
                     key={subcategory.name}
                     onClick={() => handleFilterClick(subcategory.name)}
-                    className={`px-4 py-2 text-sm rounded-full border transition-all duration-300 ${
+                    className={`px-6 py-3 text-xs uppercase tracking-luxury border transition-all duration-700 font-sans ${
                       selectedFilter === subcategory.name
-                        ? 'bg-white text-black shadow-lg scale-105'
-                        : 'bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:scale-105'
+                        ? 'bg-white text-black border-white font-medium'
+                        : 'bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30 font-light'
                     }`}
                   >
                     {subcategory.name}
@@ -145,24 +145,24 @@ const ProjectsSection: React.FC = () => {
           )}
 
           {/* Alternating Image + Description Layout */}
-          <div className="space-y-16">
+          <div className="space-y-32">
             {filteredItems.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
+                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-16 items-center`}
               >
                 {/* Image */}
                 <div className="w-full md:w-1/2 flex items-center justify-center">
                   <img 
                     src={item.image} 
                     alt={item.description}
-                    className="w-full h-auto object-contain rounded-2xl shadow-2xl"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
 
                 {/* Description */}
-                <div className="w-full md:w-1/2 space-y-4">
-                  <p className="text-xl text-white/80 leading-relaxed">
+                <div className="w-full md:w-1/2">
+                  <p className="text-base md:text-lg text-white/60 leading-loose font-sans font-light">
                     {item.description}
                   </p>
                 </div>
