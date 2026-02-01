@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectsSection from './sections/ProjectsSection';
 import AboutMe from '../components/AboutMe';
+import Contacts from '../components/Contacts';
 
 interface MainContentProps {
   sidebarIsOpen: boolean;
@@ -23,7 +24,7 @@ const MainContent: React.FC<MainContentProps> = ({ sidebarIsOpen }) => (
     </section>
 
     <section id="contacts" className="mb-32">
-      {/* TODO: Add contacts content */}
+      <Contacts />
     </section>
   </div>
 );
