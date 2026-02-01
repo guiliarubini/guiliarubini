@@ -52,4 +52,4 @@ make
 ```
 ## Project Information
 
-- **Owner & Developer**: BondaiKa
+- **Owner & Developer**: BondaiKa - Karim Safiullin

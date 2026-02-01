@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectsSection from './sections/ProjectsSection';
+import AboutMe from '../components/AboutMe';
 
 interface MainContentProps {
   sidebarIsOpen: boolean;
@@ -13,12 +14,12 @@ const MainContent: React.FC<MainContentProps> = ({ sidebarIsOpen }) => (
         : ''
     }`}
   >
-    <section id="projects" className="mb-10">
-      <ProjectsSection />
+    <section id="about" className="mb-10">
+      <AboutMe />
     </section>
 
-    <section id="about" className="mb-10">
-      {/* TODO: Add about me content */}
+    <section id="projects" className="mb-10">
+      <ProjectsSection />
     </section>
 
     <section id="contacts" className="mb-10">

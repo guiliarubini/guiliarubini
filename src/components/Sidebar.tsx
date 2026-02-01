@@ -55,7 +55,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <button
           type="button"
           onClick={() => handleNavClick(item.id)}
-          className="w-full py-2 text-center text-gray-800 hover:text-blue-500 transition-colors duration-300"
+          className="w-full py-2 text-center text-white hover:text-white/70 transition-colors duration-300"
         >
           {item.label}
         </button>
@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     <>
       {/* Hamburger Menu - Always Visible */}
       <div
-        className="fixed top-4 left-4 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center text-2xl text-gray-800 cursor-pointer z-50 transition-colors duration-300 hover:bg-gray-200 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        className="fixed top-4 left-4 w-12 h-12 bg-black/80 border border-white/20 rounded-full shadow-md flex items-center justify-center text-2xl text-white cursor-pointer z-50 transition-colors duration-300 hover:bg-black hover:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30"
         onClick={onToggleSidebar}
         role="button"
         tabIndex={0}
@@ -78,14 +78,14 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full bg-white shadow-lg p-5 flex flex-col items-center transform transition-transform duration-300 z-[100] ${
+        className={`fixed top-0 left-0 h-full bg-black/95 backdrop-blur-sm border-r border-white/10 shadow-lg p-5 flex flex-col items-center transform transition-transform duration-300 z-[100] ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${isMobile ? 'w-2/5' : 'w-64'}`}
       >
         {/* Close Button */}
         <button
           onClick={onCloseSidebar}
-          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors duration-300"
+          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-white/70 hover:text-white transition-colors duration-300"
           aria-label="Close Sidebar"
         >
           <FaTimes size={20} />
@@ -97,8 +97,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           alt="Giulia Rubini"
           className="w-32 h-32 rounded-full object-cover mb-5"
         />
-        <h1 className="text-2xl font-semibold text-center">Giulia Rubini</h1>
-        <p className="mt-2 mb-5 text-gray-600 text-center">
+        <h1 className="text-2xl font-semibold text-center text-white">Giulia Rubini</h1>
+        <p className="mt-2 mb-5 text-white/70 text-center">
           Fashion Designer
         </p>
 
@@ -110,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         </nav>
 
         {/* Footer */}
-        <footer className="mt-auto text-gray-400 text-center">
+        <footer className="mt-auto text-white/40 text-center">
           <p>© 2025 Giulia Rubini</p>
         </footer>
       </aside>
