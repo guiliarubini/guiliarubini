@@ -19,20 +19,20 @@ const AboutMe: React.FC = () => {
 
           {/* Text Content */}
           <div className="w-full md:w-3/5 space-y-8 font-sans">
-            <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+            <p className="text-base md:text-lg text-white/70 leading-loose">
               I'm Giulia Rubini, born and raised in Milan - ITALY,
               where you breathe fashion as soon as you step out of
               your home.
             </p>
             
-            <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+            <p className="text-base md:text-lg text-white/70 leading-loose">
               I followed my dream and I graduated in Fashion Design
               from NABA, an international university, where I grow in
               a mix of different cultures with people from every part
               of the world.
             </p>
             
-            <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+            <p className="text-base md:text-lg text-white/70 leading-loose">
               While studying, I worked as a sales assistant because I
               wanted to be more economically independent but also because
               I've always been curious and I wanted to understand
@@ -40,7 +40,7 @@ const AboutMe: React.FC = () => {
               process.
             </p>
             
-            <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+            <p className="text-base md:text-lg text-white/70 leading-loose">
               During my last semester, I was selected for a special
               project about sustainability with the fashion designer
               Tiziano Guardini. Together, we created a capsule collection
@@ -49,7 +49,7 @@ const AboutMe: React.FC = () => {
               Fashion Show 2019.
             </p>
             
-            <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+            <p className="text-base md:text-lg text-white/70 leading-loose">
               As a Fashion Designer, my goal is to create fresh and
               cool designs that suit the needs of the customers without
               loosing any details. I had experience working with
@@ -59,11 +59,11 @@ const AboutMe: React.FC = () => {
             </p>
             
             <div className="pt-8 space-y-2">
-              <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+              <p className="text-base md:text-lg text-white/70 leading-loose">
                 Thank you for your time,
               </p>
               
-              <p className="text-base md:text-lg text-white/70 leading-loose font-light">
+              <p className="text-base md:text-lg text-white/70 leading-loose">
                 Following a selection of my latest works.
               </p>
               

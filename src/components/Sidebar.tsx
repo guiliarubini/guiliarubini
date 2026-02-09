@@ -3,6 +3,9 @@ import {
   FaBars,
   FaTimes,
 } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import profileImage from '../assets/profile.jpg';
 
 interface NavItem {
@@ -55,7 +58,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <button
           type="button"
           onClick={() => handleNavClick(item.id)}
-          className="w-full py-3 text-center text-white uppercase tracking-luxury text-xs font-sans font-medium hover:text-white/60 transition-all duration-500"
+          className="w-full py-3 text-center text-white uppercase tracking-luxury text-xs font-sans hover:text-white/60 transition-all duration-500"
         >
           {item.label}
         </button>
@@ -98,9 +101,48 @@ const Sidebar: React.FC<SidebarProps> = ({
           className="w-36 h-36 rounded-none object-cover mb-8 mt-12 border border-white/10"
         />
         <h1 className="text-2xl font-serif text-center text-white tracking-editorial mb-2">Giulia Rubini</h1>
-        <p className="mt-1 mb-12 text-white/50 text-center text-xs uppercase tracking-luxury font-sans font-light">
+
+                <p className="mt-1 mb-2 text-white/50 text-center text-xs uppercase tracking-luxury font-sans">
           Fashion Designer
         </p>
+        
+        {/* Social Links */}
+        <div className="mb-8 flex gap-6 justify-center">
+          <a 
+            href="mailto:g.rubini.fashiondesigner@gmail.com"
+            className="text-white/40 hover:text-white transition-all duration-500 hover:scale-110"
+            aria-label="Email"
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+          </a>
+          <a 
+            href="tel:+393492959753"
+            className="text-white/40 hover:text-white transition-all duration-500 hover:scale-110"
+            aria-label="Phone"
+          >
+            <FontAwesomeIcon icon={faPhone} className="text-xl" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/giulia-rubini-387550177/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-white transition-all duration-500 hover:scale-110"
+            aria-label="LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
+          </a>
+          <a 
+            href="https://www.instagram.com/giuliarubinifashiondesigner?igsh=bXE1YmtqdjI0ODN1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-white transition-all duration-500 hover:scale-110"
+            aria-label="Instagram"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="text-xl" />
+          </a>
+        </div>
+        
+
 
         {/* Navigation Links */}
         <nav className="w-full mt-4">

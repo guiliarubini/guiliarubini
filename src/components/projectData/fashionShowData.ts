@@ -7,7 +7,7 @@ import sustainableVision from '../../assets/fashion_show/sustainable_vision_fash
 
 export const fashionShowProject: Project = {
   id: 'fashionshow',
-  title: 'Fashion Show / Podium',
+  title: 'Fashion Show\nIn Collaboration with Tiziano Guardini',
   description: 'Runway and fashion show collections',
   coverImage: sustainableVision,
   subcategories: [

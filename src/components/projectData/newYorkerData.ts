@@ -10,7 +10,7 @@ import tailoringSet from '../../assets/new_yorker_project/tailoring_set_ss_24.pn
 
 export const newYorkerProject: Project = {
   id: 'newyorker',
-  title: 'New Yorker',
+  title: '2022 - Present\nFashion Designer\nat New Yorker',
   description: 'Commercial fashion design projects for New Yorker brand',
   coverImage: newYorkerLogo,
   subcategories: [

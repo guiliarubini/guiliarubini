@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['DM Serif Display', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'serif': ['Bebas Neue', 'sans-serif'],
+        'sans': ['Bebas Neue', 'sans-serif'],
       },
       letterSpacing: {
         'luxury': '0.15em',

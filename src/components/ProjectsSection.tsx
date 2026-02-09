@@ -63,9 +63,14 @@ const ProjectsSection: React.FC = () => {
                 {/* Content */}
                 <div className="w-full md:w-3/5 space-y-4 md:space-y-6 font-sans">
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white group-hover:text-white/70 transition-all duration-700 tracking-editorial">
-                    {project.title}
+                    {project.title.split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        {i < project.title.split('\n').length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
                   </h3>
-                  <p className="text-base md:text-lg text-white/60 leading-loose font-light">
+                  <p className="text-base md:text-lg text-white/60 leading-loose">
                     {project.description}
                   </p>
                   {project.subcategories && (
@@ -73,7 +78,7 @@ const ProjectsSection: React.FC = () => {
                       {project.subcategories.map((sub) => (
                         <span
                           key={sub.name}
-                          className="px-4 py-2 text-xs uppercase tracking-luxury bg-transparent text-white/40 border border-white/10 font-light"
+                          className="px-4 py-2 text-xs uppercase tracking-luxury bg-white/10 text-white/60 border border-white/20"
                         >
                           {sub.name}
                         </span>
@@ -81,7 +86,7 @@ const ProjectsSection: React.FC = () => {
                     </div>
                   )}
                   <div className="pt-6">
-                    <span className="inline-flex items-center gap-3 text-white/40 text-xs uppercase tracking-luxury group-hover:text-white group-hover:gap-5 transition-all duration-700 font-light">
+                    <span className="inline-flex items-center gap-3 text-white/40 text-xs uppercase tracking-luxury group-hover:text-white group-hover:gap-5 transition-all duration-700">
                       View Project <span>→</span>
                     </span>
                   </div>
@@ -98,7 +103,7 @@ const ProjectsSection: React.FC = () => {
           {/* Back Button */}
           <button
             onClick={handleBackToProjects}
-            className="mb-12 text-white/40 hover:text-white transition-all duration-700 flex items-center gap-3 text-xs uppercase tracking-luxury font-sans font-light"
+            className="mb-12 text-white/40 hover:text-white transition-all duration-700 flex items-center gap-3 text-xs uppercase tracking-luxury font-sans"
           >
             <span>←</span> Back to Projects
           </button>
@@ -113,8 +118,8 @@ const ProjectsSection: React.FC = () => {
                   onClick={() => handleFilterClick('All')}
                   className={`px-6 py-3 text-xs uppercase tracking-luxury border transition-all duration-700 font-sans ${
                     selectedFilter === 'All'
-                      ? 'bg-white text-black border-white font-medium'
-                      : 'bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30 font-light'
+                      ? 'bg-white text-black border-white'
+                      : 'bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30'
                   }`}
                 >
                   All
@@ -125,8 +130,8 @@ const ProjectsSection: React.FC = () => {
                     onClick={() => handleFilterClick(subcategory.name)}
                     className={`px-6 py-3 text-xs uppercase tracking-luxury border transition-all duration-700 font-sans ${
                       selectedFilter === subcategory.name
-                        ? 'bg-white text-black border-white font-medium'
-                        : 'bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30 font-light'
+                        ? 'bg-white text-black border-white'
+                        : 'bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30'
                     }`}
                   >
                     {subcategory.name}
@@ -154,7 +159,7 @@ const ProjectsSection: React.FC = () => {
 
                 {/* Description */}
                 <div className="w-full md:w-1/2">
-                  <p className="text-base md:text-lg text-white/60 leading-loose font-sans font-light">
+                  <p className="text-base md:text-lg text-white/60 leading-loose font-sans">
                     {item.description}
                   </p>
                 </div>

@@ -8,25 +8,25 @@ const Impressum: React.FC = () => {
         
         <div className="max-w-2xl mx-auto text-center space-y-3">
           <div className="space-y-1">
-            <p className="text-base text-white/30 font-sans font-light">
+            <p className="text-base text-white/30 font-sans">
               Giulia Rubini
             </p>
-            <p className="text-base text-white/30 font-sans font-light">
+            <p className="text-base text-white/30 font-sans">
               Fashion Designer
             </p>
           </div>
           
           <div className="pt-2 space-y-1">
-            <p className="text-sm text-white/30 font-sans font-light">
+            <p className="text-sm text-white/30 font-sans">
               E-Mail: <a href="mailto:rubini.fashiondesigner@gmail.com" className="hover:text-white/50 transition-all duration-500">rubini.fashiondesigner@gmail.com</a>
             </p>
-            <p className="text-sm text-white/30 font-sans font-light">
+            <p className="text-sm text-white/30 font-sans">
               Telefon: <a href="tel:+393492959753" className="hover:text-white/50 transition-all duration-500">+39 349 295 9753</a>
             </p>
           </div>
           
           <div className="pt-4">
-            <p className="text-xs text-white/20 font-sans font-light leading-relaxed">
+            <p className="text-xs text-white/20 font-sans leading-relaxed">
               Dieses Portfolio dient ausschließlich der Darstellung persönlicher Arbeiten.
               <br />
               Es werden keine Waren oder Dienstleistungen über diese Website angeboten.

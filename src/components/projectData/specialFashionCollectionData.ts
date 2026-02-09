@@ -6,7 +6,7 @@ import denibleExample3 from '../../assets/special_fashion_collection/denible_exa
 
 export const specialFashionCollectionProject: Project = {
   id: 'specialfashioncollection',
-  title: 'Special Fashion Collection',
+  title: 'DENIBLE\nGraduation Project',
   description: 'Unique and experimental fashion design projects',
   coverImage: denibleHead,
   subcategories: [

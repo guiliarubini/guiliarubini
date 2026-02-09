@@ -8,38 +8,38 @@ const Contacts: React.FC = () => {
         
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <div className="space-y-2">
-            <p className="text-xs uppercase tracking-luxury text-white/40 font-sans font-light">
+            <p className="text-xs uppercase tracking-luxury text-white/40 font-sans">
               Email:
             </p>
             <a 
               href="mailto:g.rubini.fashiondesigner@gmail.com"
-              className="block text-base md:text-lg text-white/60 hover:text-white transition-all duration-700 font-sans font-light"
+              className="block text-base md:text-lg text-white/60 hover:text-white transition-all duration-700 font-sans"
             >
               g.rubini.fashiondesigner@gmail.com
             </a>
           </div>
           
           <div className="space-y-2 pt-4">
-            <p className="text-xs uppercase tracking-luxury text-white/40 font-sans font-light">
+            <p className="text-xs uppercase tracking-luxury text-white/40 font-sans">
               Phone:
             </p>
             <a 
               href="tel:+393492959753"
-              className="block text-base md:text-lg text-white/60 hover:text-white transition-all duration-700 font-sans font-light"
+              className="block text-base md:text-lg text-white/60 hover:text-white transition-all duration-700 font-sans"
             >
               +39 3492959753
             </a>
           </div>
           
           <div className="space-y-2 pt-4">
-            <p className="text-xs uppercase tracking-luxury text-white/40 font-sans font-light">
+            <p className="text-xs uppercase tracking-luxury text-white/40 font-sans">
               LinkedIn:
             </p>
             <a 
               href="https://www.linkedin.com/in/giulia-rubini-387550177/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-base md:text-lg text-white/60 hover:text-white transition-all duration-700 font-sans font-light"
+              className="block text-base md:text-lg text-white/60 hover:text-white transition-all duration-700 font-sans"
             >
               Giulia Rubini
             </a>
